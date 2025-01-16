@@ -1,11 +1,11 @@
 // Получаем элементы меню
 const menu = document.getElementById('menu');
-const startGameBtn = document.getElementById('startGameBtn');
+const mapBtn = document.getElementById('mapBtn');
 const settingsBtn = document.getElementById('settingsBtn');
 const exitBtn = document.getElementById('exitBtn');
 
 // Функция для старта игры
-function startGame() {
+function map() {
   window.location.href = 'game.html'; // Переход на страницу игры
 }
 
@@ -20,6 +20,6 @@ function exitGame() {
 }
 
 // Обработчики событий для кнопок
-startGameBtn.addEventListener('click', startGame);
+mapBtn.addEventListener('click', map);
 settingsBtn.addEventListener('click', openSettings);
 exitBtn.addEventListener('click', exitGame);
