@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2D Battle Game</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    canvas {
+      border: 1px solid black;
+      max-width: 100%;
+      height: auto;
+    }
+
+    #controls {
+      position: fixed;
+      bottom: 20px;
+      z-index: 10;
+      display: none; /* Скрываем по умолчанию */
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .movement-controls {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 150px;
+      pointer-events: auto;
+    }
+
+    .action-controls {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 150px;
+      pointer-events: auto;
+    }
+
+    #controls button {
+      margin: 5px;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #ddd;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #controls button:active {
+      background-color: #bbb;
+    }
+
+    /* Показать кнопки управления только на мобильных устройствах */
+    @media (max-width: 1024px) {
+      #controls {
+        display: flex;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <canvas id="gameCanvas"></canvas>
+  <div id="controls">
+    <div class="movement-controls">
+      <button id="upBtn">Up</button>
+      <button id="leftBtn">Left</button>
+      <button id="downBtn">Down</button>
+      <button id="rightBtn">Right</button>
+    </div>
+    <div class="action-controls">
+      <button id="attackBtn">Attack</button>
+      <button id="defendBtn">Defend</button>
+    </div>
+  </div>
+  <script src="../javascript/combat.js"></script>
+</body>
+</html>
