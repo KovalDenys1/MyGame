@@ -9,6 +9,14 @@ body {
     background-color: #f0f0f0;
     font-family: 'Arial', sans-serif;
   }
+    
+  #map {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('path_to_your_tile_image.png'); /* Укажите путь к пиксельному фону */
+    background-size: 32px 32px; /* Масштаб фона под нужный размер */
+  }
   
   /* Стили для канваса */
   canvas {
